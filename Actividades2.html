@@ -1,0 +1,204 @@
+<html>
+    <head>
+        //<script>
+            //Tamaño Grande 
+            var array =[-1,3,5,-5];
+            var word='big';
+            function Big(a) {
+                for (var i =0;i<a.length;i++){
+                    if(a[i]>0){
+                        a[i]=word
+                    }
+                }
+                return a;
+            }
+            console.log(Big(array));
+            //Imprime (print) el menor, devuelve (return) el mayor
+            array = [5,7,3,9,1];
+            function mayor(x) {
+                var min=0;
+                var max =0;
+                for(var a= 0; a<x.length;a++){
+                    if(min >x[a])
+                    {
+                        min=x[a];
+                    }
+                    if(max < x[a])
+                    {
+                        max=x[a];            
+                    }       
+                }
+                console.log(min);
+                return max;
+            }
+            max= mayor(array);
+            console.log(max);       
+            //Imprime (print) uno, devuelve (return) otro
+            array = [2,4,3,0,1];
+            var impar =0;
+            function imparPenultimo(x) {
+                console.log(x[x.length-2]);
+                for(var i =0;i<x.length;i++){
+                    if(i%2!==0){
+                        impar=x[i];
+                        return impar;
+                        break;
+                    }
+                }                
+            }
+            impar=imparPenultimo(array);
+            console.log(impar);
+            //Doble Visión
+            array =[1,2,3];
+            var newarr =[];
+            function doble(x) {
+                for(var i=0; i<x.length;i++){
+                    newarr.push(x[i]+x[i]);
+                }
+                return newarr;
+            }
+            newarr=doble(array);
+            console.log(newarr);
+            //Contar Positivos
+            array =[-1,1,1,1];
+            var cont=0;
+            function contar(x) {
+                for (var i =0;i<x.length;i++){
+                    if(x[i]>0){
+                      cont+=1;
+                    }
+                }
+                x[x.length-1]=cont;
+                return x
+            }
+            array=contar(array);
+            console.log(array);
+            //Pares e Impares
+            array =[1,1,1,2,,1,4,4,6,3]
+            var seqP =0;
+            var seqI =0;
+            function parImpar(x) {
+                for (var i=0;i<x.length;i++){
+                    if(x[i]%2===0){
+                        seqP++;
+                        seqI=0;
+                    }else if (x[i]%2!==0){
+                        seqI++;
+                        seqP=0;
+                    }   
+                    if(seqI===3){
+                    console.log('¡Qué imparcial!')
+                    }
+                    if(seqP===3){
+                    console.log('¡Es para bien!')
+                    }
+                
+                }
+            }
+            parImpar(array)
+            //Incrementa los Segundos 
+            array=[-1,3,5,-5];
+            function aumentoImp(x) {
+                console.log(x);
+                for(var i=0;i<x.length;i++){
+                    if(i%2!==0){
+                        x[i]=x[i]+1;
+                    }
+                }
+                return x;                
+            }
+            array=aumentoImp(array);
+            console.log(array)
+            //Longitudes previas
+            array=['programar','dojo', 'genial'];
+            var lon=0;
+            function longPrev(x) {
+                for (var i=x.length-1;i>0;i--){
+                    
+                    x[i]=x[i-1].length;
+                }
+                return x;
+            }
+            array=longPrev(array);
+            console.log(array);
+            // Agrega Siete
+            array =[-1,3,5,-5];
+            var arrnew=[];
+            function agregaS(x) {
+                for (var i=0; i<x.length;i++){
+                    arrnew.push(x[i]+7);
+                }
+                console.log(x);
+                return arrnew
+            }
+            arrnew=agregaS(array);
+            console.log(arrnew);
+            //Array Inverso
+            array=[3,1,6,4,2];
+            console.log(array);
+            array=array.reverse();
+            console.log(array);
+            //Perspectiva: Negativa
+            array= [1,-3,5]
+            var arrneg =[];
+            function negativos(x) {
+                for (var i=0;i<x.length;i++){
+                    if(x[i]>0){
+                        arrneg.push(x[i]*-1);
+                    }
+                    else{
+                        arrneg.push(x[i]);
+                    }
+                }
+                return arrneg;
+                
+            }
+            arrneg=negativos(array);
+            console.log(arrneg);
+            //Siempre hambriento
+            array=['comidaaa','dojo', 'genial'];
+            var com='comida';
+            var igual=0,aux=0;
+            function hambre(x) {
+                for(var i =0;i<x.length;i++){
+                    igual=com.localeCompare(x[i])
+                    if(igual===0){
+                        console.log('yummy')
+                        break;
+                    }else{
+                        aux++;
+                    }
+
+                }
+                if(aux!==0){
+                    console.log('hambre')
+                }
+            }
+            hambre(array);
+            //Cambiar hacia el centro
+             array =[1,2,3,4,5,6]
+             var aux=0;
+             var longi=array.length-1
+             function cambio(x) {
+                 for(var i=0;i<x.length-1;x+2){
+                    
+                    
+                 }
+                 return x;
+             }
+             array=cambio(array);
+             console.log(array);
+            //Escala el Array
+            var num=2;
+            array=[2,3]
+            function multi(x,y) {
+                for(var i=0;i<x.length;i++){
+                    x[i]=x[i]*y;
+                }
+                return x
+            }
+            array=multi(array,num);
+            console.log(array);
+        </script>
+    </head>
+</html>
